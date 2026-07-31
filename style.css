@@ -8,6 +8,7 @@
   font-weight: 400;
   font-style: normal;
   color: #12102B;
+  scroll-behavior: smooth;
 }
 
 .valkyra_main_container .container {
@@ -137,6 +138,11 @@
   background-position: right;
   background-color: #F7F1EB;
 }
+@media (max-width: 768px) {
+  .valkyra_main_container .hero_section {
+    background-position: bottom;
+  }
+}
 .valkyra_main_container .hero_section .content_wrapper {
   display: flex;
   flex-direction: column;
@@ -161,7 +167,7 @@
   line-height: 106%;
 }
 .valkyra_main_container .hero_section .content_wrapper p {
-  font-size: clamp(16px, 8vw, 32px);
+  font-size: clamp(16px, 4vw, 32px);
   font-style: normal;
   font-weight: 400;
   line-height: 146%;

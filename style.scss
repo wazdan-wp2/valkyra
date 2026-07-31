@@ -9,6 +9,7 @@
     font-weight: 400;
     font-style: normal;
     color: #12102B;
+    scroll-behavior: smooth;
 }
 
 .valkyra_main_container {
@@ -158,6 +159,10 @@
         background-position: right;
         background-color: #F7F1EB;
 
+        @media (max-width: 768px) {
+            background-position: bottom;
+        }
+
 
         .content_wrapper {
             display: flex;
@@ -184,7 +189,7 @@
             }
 
             p {
-                font-size: clamp(16px, 8vw, 32px);
+                font-size: clamp(16px, 4vw, 32px);
                 font-style: normal;
                 font-weight: 400;
                 line-height: 146%;
@@ -469,6 +474,7 @@
                                 @media (max-width: 1550px) {
                                     max-width: 600px;
                                 }
+
                                 @media (max-width: 768px) {
                                     line-height: 26px;
                                 }
