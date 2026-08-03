@@ -15,13 +15,12 @@
 .valkyra_main_container {
 
     .container {
-        min-height: 100vh;
         display: flex;
         align-items: center;
         max-width: 1543px;
         width: 100%;
         margin: auto;
-        padding: 20px;
+        padding: 50px 20px;
 
         @media (max-width: 768px) {
             min-height: 75vh;
@@ -177,12 +176,14 @@
 
                         &:hover {
                             background-color: #FFB031;
-                            @media (max-width:768px){
+
+                            @media (max-width:768px) {
                                 background-color: #12102B;
-                                span{
+
+                                span {
                                     color: #FFB031;
                                 }
-                            }                            
+                            }
                         }
 
                         .contact_btn_text {
@@ -235,6 +236,16 @@
         @media (max-width: 768px) {
             background-position: bottom;
             background-size: contain;
+        }
+
+        .container {
+            min-height: 90vh;
+
+            @media (max-width: 768px) {
+                min-height: 75vh;
+                padding: 70px 20px;
+                align-items: flex-start;
+            }
         }
 
 

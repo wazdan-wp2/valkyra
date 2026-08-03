@@ -12,13 +12,12 @@
 }
 
 .valkyra_main_container .container {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   max-width: 1543px;
   width: 100%;
   margin: auto;
-  padding: 20px;
+  padding: 50px 20px;
 }
 @media (max-width: 768px) {
   .valkyra_main_container .container {
@@ -210,6 +209,16 @@
   .valkyra_main_container .hero_section {
     background-position: bottom;
     background-size: contain;
+  }
+}
+.valkyra_main_container .hero_section .container {
+  min-height: 90vh;
+}
+@media (max-width: 768px) {
+  .valkyra_main_container .hero_section .container {
+    min-height: 75vh;
+    padding: 70px 20px;
+    align-items: flex-start;
   }
 }
 .valkyra_main_container .hero_section .content_wrapper {
