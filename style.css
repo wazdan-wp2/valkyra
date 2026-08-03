@@ -136,21 +136,68 @@
 .valkyra_main_container header .header_wrapper .menu_wrapper a:hover {
   color: #FFB031;
 }
-.valkyra_main_container header .header_wrapper .menu_wrapper a:last-child {
-  color: #fff;
+.valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper {
+  position: relative;
+  display: inline-block;
+}
+.valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .contact_btn {
+  display: grid;
   border-radius: 8px;
   background: #12102B;
-  padding: 12px 32px;
-  font-size: 27px;
+  color: #fff;
+  padding: 12px 18px;
+  font-size: 26px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+}
+.valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .contact_btn span {
+  color: #fff;
+  font-weight: 500;
 }
 @media (max-width: 768px) {
-  .valkyra_main_container header .header_wrapper .menu_wrapper a:last-child {
+  .valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .contact_btn {
     font-size: 18px;
   }
 }
-.valkyra_main_container header .header_wrapper .menu_wrapper a:last-child:hover {
+.valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .contact_btn:hover {
   background-color: #FFB031;
+}
+@media (max-width: 768px) {
+  .valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .contact_btn:hover {
+    background-color: #12102B;
+  }
+  .valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .contact_btn:hover span {
+    color: #FFB031;
+  }
+}
+.valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .contact_btn .contact_btn_text {
+  grid-area: 1/1;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .contact_btn .contact_btn_text.is-visible {
+  opacity: 1;
+}
+.valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .copied_tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translate(-50%, -6px);
+  font-size: 14px;
   color: #12102B;
+  background: #F7F1EB;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.valkyra_main_container header .header_wrapper .menu_wrapper .contact_wrapper .copied_tooltip.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 .valkyra_main_container .hero_section {
   background: url("assets/img/HERO.png");
@@ -239,6 +286,7 @@
 @media (max-width: 768px) {
   .valkyra_main_container .wazdan_section .container .content_wrapper .column {
     width: 100%;
+    align-items: center;
   }
 }
 .valkyra_main_container .wazdan_section .container .content_wrapper .column h2 {
